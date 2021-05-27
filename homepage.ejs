@@ -1,0 +1,45 @@
+<html>
+<head>
+        <title>Inventory</title>
+  	
+  	<style>
+		body{
+			background-image:url('1.jpg')
+		}
+	</style>
+</head>
+<body>
+	<h1 align="center">Foot Wear Inventory System</h1>
+
+	
+	<h3><a href="/create" class ="c2">Add new product</a></h3>
+	<h3><a href="/updatestock" class ="c2">Update stock details</a></h3>
+	<h3><a href="/deleteproduct" class ="c2">Delete a product</a></h3>	
+	
+	<br><br><BR><BR><BR>
+
+	<center>
+	<table border="1" style="border-spacing:10px">
+	<tr>
+		<th style="padding:10px" >Product_Id</th>
+		<th style="padding:10px">Category</th>
+		<th style="padding:10px">Type</th>
+		<th style="padding:10px">Size</th>
+		<th style="padding:10px">Stock</th>
+		<th style="padding:10px">Price</th>
+	</tr>
+	<% for(var i=0;i<data.length;i++) {%>
+	<tr>
+		<td><%= data[i].Product_Id %></td>
+		<td><%= data[i].Category  %></td>
+		<td><%= data[i].Type  %></td>
+		<td><%= data[i].Size  %></td>
+		<td><%= data[i].Stock  %></td>
+		<td><%= data[i].Price  %></td>
+	</tr>	
+	<% }%>
+	</table>
+	</center>
+	
+</body>
+</html>
